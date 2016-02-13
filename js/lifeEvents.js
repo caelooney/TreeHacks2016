@@ -6,14 +6,14 @@ function initMap() {
   var myLatLng = {lat: 72, lng: -140};
 
   // Create a map object and specify the DOM element for display.
-  var map = new google.maps.Map(document.getElementById('oneEvent-map'), {
+  var map = new google.maps.Map(document.getElementById('lifeEvent-map'), {
     center: myLatLng,
     scrollwheel: false,
     zoom: 5,
     zoomControl: true,
     panControl: false,
     streetViewControl: false,
-    styles: MAPSTYLES,
+    // styles: MAPSTYLES,
     mapTypeId: google.maps.MapTypeId.TERRAIN
   });
 
@@ -21,28 +21,47 @@ function initMap() {
       width: 150
   });
 
+  // var styledMap = new google.maps.StyledMapType(
+  //     MAPSTYLES,
+  //     {name: "Custom Style"}
+  // );
+
+  updateMap();
+
   // Retrieving the information with AJAX
   function updateMap() {
 
-    LifeEvents = '{"1":{"oneEventId":"1","capLat":"70.71139573","capLong":"-147.8381939","Year":"2001", "Month":"10", "Day":"1", "eventType":"House party","members":"Beyonce, Solange, Jay-z, Blue Ivy"}}'
+    LifeEvents = {"1":{"oneEventId":"1","capLat":"37.7833","capLong":"-122.4167","Year":"2001", "Month":"10", "Day":"1", "eventType":"House party","members":"Beyonce, Solange, Jay-z, Blue Ivy"}}
   
       var oneEvent, marker, html;
 
       for (var key in LifeEvents) {
           oneEvent = LifeEvents[key];
 
+          console.log(key);
+
+          // console.log("pre");
           // Define the marker
-          marker = new google.maps.Marker({
+          // marker = new google.maps.Marker({
+          //     position: new google.maps.LatLng(oneEvent.capLat, oneEvent.capLong),
+          //     map: map,
+          //     title: 'oneEvent ID: ' + oneEvent.oneEventId,
+          //     // icon: 'static/img/corgi.png'
+          // });
+
+         marker = new google.maps.Marker({
               position: new google.maps.LatLng(oneEvent.capLat, oneEvent.capLong),
               map: map,
-              title: 'oneEvent ID: ' + oneEvent.oneEventId,
-              icon: '/static/img/corgi.png'
+              title: 'oneEvent ID: '
+              // icon: 'static/img/corgi.png'
           });
+
+          // console.log("post");
 
           // Define the content of the infoWindow
           html = (
               '<div class="window-content">' +
-                  '<img src="/static/img/corgi.jpg" alt="lifeEvent" style="width:150px;" class="thumbnail">' +
+                  '<img src="static/img/corgi.png" alt="lifeEvent" style="width:150px;" class="thumbnail">' +
                   '<p><b>Event members: </b>' + oneEvent.members + '</p>' +
                   '<p><b>Year: </b>' + oneEvent.Year + '</p>' +
                   '<p><b>Month: </b>' + oneEvent.Month + '</p>' +
