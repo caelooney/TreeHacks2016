@@ -6,59 +6,59 @@ $(function() {
     Morris.Area({
         element: 'morris-area-chart',
         data: [{
-            period: '2010 Q1',
-            iphone: 2666,
-            ipad: null,
-            itouch: 2647
+            period: '1',
+            Family: 2666,
+            Friends: null,
+            Memories: 2647
         }, {
-            period: '2010 Q2',
-            iphone: 2778,
-            ipad: 2294,
-            itouch: 2441
+            period: '2',
+            Family: 2778,
+            Friends: 2294,
+            Memories: 2441
         }, {
-            period: '2010 Q3',
-            iphone: 4912,
-            ipad: 1969,
-            itouch: 2501
+            period: '3',
+            Family: 4912,
+            Friends: 1969,
+            Memories: 2501
         }, {
-            period: '2010 Q4',
-            iphone: 3767,
-            ipad: 3597,
-            itouch: 5689
+            period: '4',
+            Family: 3767,
+            Friends: 3597,
+            Memories: 5689
         }, {
-            period: '2011 Q1',
-            iphone: 6810,
-            ipad: 1914,
-            itouch: 2293
+            period: '5',
+            Family: 6810,
+            Friends: 1914,
+            Memories: 2293
         }, {
-            period: '2011 Q2',
-            iphone: 5670,
-            ipad: 4293,
-            itouch: 1881
+            period: '6',
+            Family: 5670,
+            Friends: 4293,
+            Memories: 1881
         }, {
-            period: '2011 Q3',
-            iphone: 4820,
-            ipad: 3795,
-            itouch: 1588
+            period: '7',
+            Family: 4820,
+            Friends: 3795,
+            Memories: 1588
         }, {
-            period: '2011 Q4',
-            iphone: 15073,
-            ipad: 5967,
-            itouch: 5175
+            period: '8',
+            Family: 15073,
+            Friends: 5967,
+            Memories: 5175
         }, {
-            period: '2012 Q1',
-            iphone: 10687,
-            ipad: 4460,
-            itouch: 2028
+            period: '9',
+            Family: 10687,
+            Friends: 4460,
+            Memories: 2028
         }, {
-            period: '2012 Q2',
-            iphone: 8432,
-            ipad: 5713,
-            itouch: 1791
+            period: '10',
+            Family: 8432,
+            Friends: 5713,
+            Memories: 1791
         }],
         xkey: 'period',
-        ykeys: ['iphone', 'ipad', 'itouch'],
-        labels: ['iPhone', 'iPad', 'iPod Touch'],
+        ykeys: ['Family', 'Friends', 'Memories'],
+        labels: ['Family', 'Friends', 'Memories'],
         pointSize: 2,
         hideHover: 'auto',
         resize: true
@@ -196,22 +196,22 @@ $(function() {
     Morris.Bar({
         element: 'morris-bar-chart',
         data: [{
-            device: 'iPhone',
+            device: 'Family',
             geekbench: 136
         }, {
-            device: 'iPhone 3G',
+            device: 'Family 3G',
             geekbench: 137
         }, {
-            device: 'iPhone 3GS',
+            device: 'Family 3GS',
             geekbench: 275
         }, {
-            device: 'iPhone 4',
+            device: 'Family 4',
             geekbench: 380
         }, {
-            device: 'iPhone 4S',
+            device: 'Family 4S',
             geekbench: 655
         }, {
-            device: 'iPhone 5',
+            device: 'Family 5',
             geekbench: 1571
         }],
         xkey: 'device',
